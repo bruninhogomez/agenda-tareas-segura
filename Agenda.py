@@ -9,7 +9,7 @@ def login():
 
 if __name__ == "__main__":
     login()
-    main()
+    
 
 TAREAS_CSV = "tareas.csv"
 
