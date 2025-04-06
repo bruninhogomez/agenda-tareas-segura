@@ -9,7 +9,7 @@ def login():
 
 if __name__ == "__main__":
     login()
-    
+
 
 TAREAS_CSV = "tareas.csv"
 
@@ -33,6 +33,8 @@ def mostrar_menu():
     print("3. Marcar tarea como hecha")
     print("4. Eliminar tarea")
     print("5. Salir")
+
+    
 
 def main():
     tareas = cargar_tareas()
@@ -63,9 +65,28 @@ def main():
                 print("🗑️ Tarea eliminada.")
         elif opcion == "5":
             print("Hasta luego 👋")
+            subir_a_drive()
             break
         else:
             print("❌ Opción inválida")
 
+
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
+
+def subir_a_drive():
+    gauth = GoogleAuth()
+    gauth.LocalWebserverAuth()  # Se abrirá el navegador para autenticar
+    drive = GoogleDrive(gauth)
+
+    archivo = drive.CreateFile({'title': 'tareas.csv'})
+    archivo.SetContentFile('tareas.csv')
+    archivo.Upload()
+    print("✅ Archivo subido a Google Drive")
+
+
+
+
 if __name__ == "__main__":
     main()
+
