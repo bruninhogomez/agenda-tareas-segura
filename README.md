@@ -25,3 +25,15 @@ CSV para almacenamiento local de tareas.
 Google Drive API para el almacenamiento en la nube.
 OAuth 2.0 para autenticación segura con Google.
 Git y GitHub para control de versiones y alojamiento del proyecto.
+
+PROYECTO 3:
+Motivación real:
+He decidido crear una Agenda de Tareas Segura con exportación y subida a la nube, creo que es una cosa bastante práctica , la cual me puede servir para mi día a día y darle mucha utilidad. Cambié de proyecto porque el anterior se me estaba haciendo bastante complicado. Este nuevo proyecto es más manejable y me ha permitido centrarme en la funcionalidad real.
+
+Cmo intalar y usar :
+git clone https://github.com/bruninhogomez/agenda-tareas-segura.git
+cd agenda-tareas-segura.git
+python agenda.py
+
+Ejemplo de uso :
+Cuando se ejecuta, la agenda pedirá una contraseña. Luego puedes añadir tareas, marcarlas como hechas, eliminarlas, y exportarlas a CSV para subirlas a Google Drive.
